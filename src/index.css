@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&display=swap');
 
 @font-face {
   font-family: 'Bellefair';
@@ -10,6 +10,7 @@
 :root {
   
   --globalFont: 'Barlow Condensed', sans-serif;
+  --BarlowFont: 'Barlow', sans-serif;
   --titleFont: 'Bellefair', serif;
   --fontSizeParagraph: 16px;
   
@@ -36,13 +37,32 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Bellefair', serif;
   color: #fff;
-  font-size: 100px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+h1 {
+  font-size: 15rem;
+}
+h2 {
+  font-size: 10rem;
+}
+h3 {
+  font-size: 5.6rem;
+}
+h4 {
+  font-size: 3.2rem;
+}
+h5 {
+  font-family: var(--globalFont);
+  color: var(--text-color);
   
+}
 
-
-} 
+p {
+  color: var(--text-color);
+  font-family: var(--BarlowFont);
+}
 
 ul {
     list-style: none;

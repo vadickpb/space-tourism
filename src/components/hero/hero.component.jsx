@@ -1,10 +1,10 @@
-import heroImgTablet from '../../assets/img/background-home-tablet.jpg'
+import backgroundHomeMovile from '../../assets/home/background-home-mobile.jpg'
 
 
 const Hero = () => {
   return (
     <div className="hero-container">
-      <img src={heroImgTablet} alt="" />
+      <img className='hero-img' src={backgroundHomeMovile} alt="" />
 
       <div className="hero-info">
         
