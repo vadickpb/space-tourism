@@ -1,0 +1,216 @@
+.crew-container {
+  background: url('../../assets/crew/background-crew-desktop.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+  // gap: 8.1rem;
+
+  padding-top: 19.8rem;
+  padding-left: 16.5rem;
+  padding-right: 13.7rem;
+
+  .crew-subtitle {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.472rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+
+    span {
+      opacity: 0.25;
+    }
+  }
+
+  .crew-info-image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 8.1rem;
+    .crew-info-container {
+      width: 40%;
+
+      .crew-job {
+        margin-top: 15.4rem;
+        font-size: 3.2rem;
+        font-weight: 400;
+        opacity: 0.25;
+        text-transform: uppercase;
+      }
+
+      .crew-name {
+        font-size: 5.6rem;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      .crew-text {
+        margin-top: 2.7rem;
+        // width: 44.4rem;
+        font-size: 1.8rem;
+      }
+
+      .circle-links-container {
+        width: 13.2rem;
+
+        display: flex;
+        gap: 2.4rem;
+
+        margin-top: 12rem;
+
+        .circle-link {
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: #fff;
+          border-radius: 50%;
+          opacity: 0.25;
+        }
+
+        .active-circle {
+          opacity: inherit;
+        }
+
+
+
+        .crew-text {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+  .crew-image {
+    width: 58.6rem;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .crew-container {
+    background: url('../../assets/crew/background-crew-tablet.jpg') no-repeat center center fixed;
+    background-size: cover;
+    // padding-inline: 15.5rem;
+    padding-inline: 0;
+    padding-top: 13.6rem;
+
+    .crew-subtitle {
+      // margin-top: 13.6rem;
+      font-size: 2rem;
+      margin-left: 3.86rem;
+    }
+
+    .crew-info-image-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .crew-info-container {
+        width: 55%;
+        text-align: center;
+
+        .crew-job {
+          font-size: 2.4rem;
+        }
+        .crew-name{
+          font-size: 4rem;
+        }
+        .crew-text {
+          font-size: 1.6rem;
+        }
+        .circle-links-container {
+          width: 100%;
+          margin-top: 4rem;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .crew-image {
+    width: 70%;
+    // display: flex;
+    // align-items: center;
+  
+    img {
+      width: 100%;
+      
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .crew-container{
+    background: url(../../assets/crew/background-crew-mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+
+    padding-top: 8.8rem;
+    padding-inline: 0;
+
+    .crew-subtitle{
+      font-size: 1.6rem;
+      margin: 0;
+      text-align: center;
+      // margin-top: 8.8rem;
+    }
+    .crew-info-image-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      gap: 3.2rem;
+      .crew-info-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        .crew-job{
+          font-size: 1.6rem;
+          order: 2;
+          margin-top: 3.2rem;
+        }
+        .crew-name {
+          order: 3;
+          font-size: 2.4rem;
+        }
+        .crew-text{
+          order: 4;
+          font-size: 1.5rem;
+          margin-bottom: 10.4rem;
+        }
+
+        .circle-links-container {
+          order: 1;
+          margin: 0;
+          .circle-link {
+            width: 1rem;
+          }
+        }
+      }
+      .crew-image {
+        margin-top: 3.2rem;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 60%;
+        }
+
+        hr {
+          display: block;
+          opacity: 0.25;
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}
