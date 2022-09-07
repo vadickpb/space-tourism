@@ -1,0 +1,113 @@
+.home-container {
+  background: url('../../assets/home/background-home-desktop.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #161515;
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  // padding-top: 13.1rem;
+  padding-inline: 16.5rem;
+  // padding-inline: 0;
+  // width: 100%;
+  min-height: 100vh;
+  
+
+  .home-info-container {
+    width: 45rem;
+    .home-sub-title {
+      font-size: 2.8rem;
+      line-height: 3.4rem;
+      letter-spacing: 0.472rem;
+      font-weight: 400;
+    }
+    .home-title  {
+      text-transform: uppercase;
+      font-size: 15rem;
+      font-weight: 400;
+      
+    }
+  
+    .home-text {
+      font-size: 1.8rem;
+    }
+  }
+
+  .home-button {
+    background-color: #fff;
+    width: 27.4rem;
+    height: 27.4rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text-button {
+      color: black;
+      font-size: 3.2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+
+
+
+    
+  }
+}
+
+@media (max-width:1000px) {
+  .home-container {
+    background-image: url('../../assets/home/background-home-tablet.jpg');
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15.6rem;
+
+    padding-top: 20.2rem;
+    
+    .home-info-container {
+  
+      .home-sub-title{
+        font-size: 2rem;
+      }
+  
+      text-align: center;
+    }
+    .home-button {
+      width: 24.2rem;
+      height: 24.2rem;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .home-container{
+
+    .home-info-container{
+      // margin-top: 11.2rem;
+      .home-sub-title{
+        letter-spacing: 0.27rem;
+        font-weight: 400;
+      }
+      .home-title {
+        font-size: 8rem;
+      }
+    }
+
+    .home-button{
+      width: 15rem;
+      height: 15rem;
+
+      .text-button{
+        font-size: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+/* -------------------- */
+/* Fonts */
+/* --------------------- */
+
+
+
+/* -------------------- */
+/* Reset */
+/* --------------------- */
+
+/* * https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Reset Margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* Set Uo body */
+body {
+  font-family: 'Barlow Condensed', sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easy to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Make form elements easy to work with */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+// @media (prefers-reduced-motion: reduce) {
+//   html:focus-within {
+//     scroll-behavior: auto;
+//   }
+
+//   *,
+//   *::before,
+//   *::after {
+//     animation-duration: 0.01ms !important;
+//     animation-iteration-count: 1 !important;
+//     transition-duration: 0.01ms !important;
+//     scroll-behavior: auto !important;
+//   }
+// }
+
+/* -------------------- */
+/* Utily Classes */
+/* --------------------- */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem)
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem)
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 2em;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+
+
+
+/* Colors */
+
+// .bg-dark {background-color: hsl(var(--clr-dark));}
+// .bg-light {background-color: hsl(var(--clr-light));}
+// .bg-white {background-color: hsl(var(--clr-thite));}
+
+// .text-dark {color: hsl(var(--clr-dark));}
+// .text-light {color: hsl(var(--clr-light));}
+// .text-white {color: hsl(var(--clr-white));}
+
+
+// Theme Space
+h1,
+h2,
+h3,
+h4{
+  src: url('/assets/fonts/Bellefair-Regular.ttf');
+  font-family: 'Bellefair, sans-serif';
+  color: #fff;
+}
+
+h5 {
+  color: #d0d6f9;
+}
+
+p {
+  color: #d0d6f9;
+  font-weight: 400;
+  line-height: 3.2rem;
+
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.27rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
