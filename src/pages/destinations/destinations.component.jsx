@@ -1,37 +1,74 @@
+import { useState } from 'react'
+import data from '../../data.json'
+
 import MoonImage from '../../assets/destination/image-moon.png'
+import MarsImage from '../../assets/destination/image-mars.png'
+import EuropaImage from '../../assets/destination/image-europa.png'
+import TitanImage from '../../assets/destination/image-titan.png'
 import './destinations.styles.scss'
 
 const Destinations = () => {
+
+
+  const [currentDestination, setCurrentDestination] = useState(0)
+  const { name, description, images, distance, travel } = data.destinations[currentDestination]
+
+  // console.log(data.destinations[0]);
+
+
+  const onSetDestination = (index) => {
+    // console.log(data.destinations[0]);
+    setCurrentDestination(index)
+    console.log(images);
+  }
+
+  const setImage = (namePlanet) => {
+    switch (namePlanet) {
+      case 'Moon':
+        return MoonImage
+      case 'Mars':
+        return MarsImage
+      case 'Europa':
+        return EuropaImage;
+      case 'Titan':
+        return TitanImage
+      default:
+        return false
+    }
+  }
+
+
   return (
     <div className="destination-container">
       <h5 className="destination-subtitle">
         <span>01</span> pick your destination
       </h5>
 
+
       <div className="destination-elements-container">
         <div className="destination-image">
-          <img src={MoonImage} alt="" />
+          <img src={setImage(name)} alt={name} />
         </div>
 
         <div className="destination-info-container">
           <div className="destination-links">
-            <a href="" className="destination-link">moon</a>
-            <a href="" className="destination-link">mars</a>
-            <a href="" className="destination-link">europa</a>
-            <a href="" className="destination-link">tita</a>
+            <button onClick={() => onSetDestination(0)} className="destination-link">moon</button>
+            <button onClick={() => onSetDestination(1)} className="destination-link">Mars</button>
+            <button onClick={() => onSetDestination(2)} className="destination-link">Europa</button>
+            <button onClick={() => onSetDestination(3)} className="destination-link">Titan</button>
           </div>
           <h1 className="destination-title">
-            Moon
+            {name}
           </h1>
 
-          <p className="destination-text">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+          <p className="destination-text">{description}</p>
 
           <hr />
 
           <div className="destination-distance-time-container">
             <div className="distance-container">
               <p className="info-title">avg. distance</p>
-              <h3 className="info-data">384,400 km</h3>
+              <h3 className="info-data">{distance}</h3>
             </div>
 
             <div className="time-container">
@@ -39,12 +76,17 @@ const Destinations = () => {
                 est. travel time
               </p>
               <h3 className="info-data">
-                3 days
+                {travel}
               </h3>
             </div>
           </div>
         </div>
       </div>
+
+      ))
+
+
+
     </div>
   )
 }
