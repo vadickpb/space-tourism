@@ -6,8 +6,8 @@
   background-color: #161515;
 
 
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
   padding-top: 38.7rem;
   // align-items: flex-end;
 
@@ -16,23 +16,25 @@
   // padding-inline: 0;
   // width: 100%;
   min-height: 100vh;
-  
+
 
   .home-info-container {
     width: 45rem;
+
     .home-sub-title {
       font-size: 2.8rem;
       line-height: 3.4rem;
       letter-spacing: 0.472rem;
       font-weight: 400;
     }
-    .home-title  {
+
+    .home-title {
       text-transform: uppercase;
       font-size: 15rem;
       font-weight: 400;
-      
+
     }
-  
+
     .home-text {
       font-size: 1.8rem;
     }
@@ -47,6 +49,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 10.8rem rgba(255, 255, 255, 0.1);
+    }
 
     .text-button {
       color: black;
@@ -58,29 +65,34 @@
 
 
 
-    
+
   }
 }
 
 @media (max-width:1000px) {
   .home-container {
     background-image: url('../../assets/home/background-home-tablet.jpg');
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15.6rem;
+
     padding-inline: 0;
 
     padding-top: 20.2rem;
-    
+
+    .wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15.6rem;
+    }
+
     .home-info-container {
-  
-      .home-sub-title{
+
+      .home-sub-title {
         font-size: 2rem;
       }
-  
+
       text-align: center;
     }
+
     .home-button {
       width: 24.2rem;
       height: 24.2rem;
@@ -90,25 +102,28 @@
 }
 
 @media (max-width: 600px) {
-  .home-container{
-    padding-top: 0;
-    .home-info-container{
+  .home-container {
+    padding-top: 8rem;
+
+    .home-info-container {
       // margin-top: 11.2rem;
       width: 90%;
-      .home-sub-title{
+
+      .home-sub-title {
         letter-spacing: 0.27rem;
         font-weight: 400;
       }
+
       .home-title {
         font-size: 8rem;
       }
     }
 
-    .home-button{
+    .home-button {
       width: 15rem;
       height: 15rem;
 
-      .text-button{
+      .text-button {
         font-size: 2rem;
       }
     }

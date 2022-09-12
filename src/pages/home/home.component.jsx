@@ -1,14 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import backgroundMovile from '../../assets/home/background-home-mobile.jpg'
 
 import './home.styles.scss'
 
 
 const Home = () => {
+
+  const navigate = useNavigate()
   return (
 
-    <>
-      <div className="home-container">
+
+    <div className="home-container">
+      <div className="wrapper">
         <div className="home-info-container">
           <h5 className='home-sub-title'>
             SO, YOU WANT TO TRAVEL TO
@@ -19,12 +23,16 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="home-button">
+        <button 
+          className="home-button"
+          onClick={() => navigate('/destination')}
+        >
           <h3 className="text-button">Explore</h3>
-        </div>
+        </button>
       </div>
+    </div>
 
-    </>
+
 
   )
 }

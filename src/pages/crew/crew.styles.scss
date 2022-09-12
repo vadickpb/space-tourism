@@ -12,6 +12,11 @@
   padding-left: 16.5rem;
   padding-right: 13.7rem;
 
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .crew-subtitle {
     font-size: 2.8rem;
     line-height: 3.4rem;

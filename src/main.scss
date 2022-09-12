@@ -108,6 +108,38 @@ select {
   display: none;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  animation: appearBottom;
+  animation-duration: 1s;
+  
+  // animation: appearBottom 1s ease;
+  // z-index: 4;
+}
+@keyframes appearBottom {
+  from {
+    margin-top: 100vh;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+.rotate {
+  animation:rotate 50s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 
 
 

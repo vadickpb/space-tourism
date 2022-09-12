@@ -19,6 +19,7 @@
       top: 45%;
       left: 35%;
       z-index: 5;
+      opacity: 0.25;
       // left: -40rem;
     }
 
@@ -45,6 +46,11 @@
       flex-wrap: nowrap;
       letter-spacing: 0.236rem;
       padding-bottom: 2em;
+      transition: all 0.5s;
+
+      &:hover {
+        border-bottom: 3px solid gray;
+      }
     }
 
     .active-menu {
