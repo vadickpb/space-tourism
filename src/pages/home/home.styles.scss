@@ -8,7 +8,8 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  padding-top: 38.7rem;
+  // align-items: flex-end;
 
   // padding-top: 13.1rem;
   padding-inline: 16.5rem;
@@ -90,7 +91,7 @@
 
 @media (max-width: 600px) {
   .home-container{
-
+    padding-top: 0;
     .home-info-container{
       // margin-top: 11.2rem;
       width: 90%;
